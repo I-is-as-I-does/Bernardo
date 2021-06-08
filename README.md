@@ -8,7 +8,7 @@ Contains:
 - a long list of profanities and reserved words, in multiple languages;
 - a PHP implementation.
 
-A JS implementation may be coming up.
+A JS implementation may be coming up.  
 More translations of reserved words could be welcomed.
 
 ## Getting started
@@ -62,15 +62,14 @@ I suggest to make easily accessible to your users a small, dedicated contact for
 
 ## Credits
 
-Rodrigo De Almeida Siqueira (ex-project: postbit.com) 
-https://github.com/michaldudek/subdomain-blacklist
-https://github.com/ConsoleTVs/Profanity
+Rodrigo De Almeida Siqueira (ex-project: postbit.com)  
+https://github.com/michaldudek/subdomain-blacklist  
+https://github.com/ConsoleTVs/Profanity  
 
 ## Contributing
 
 Sure! :raised_hands:
 You can take a loot at [CONTRIBUTING](CONTRIBUTING.md).  
-This repo also features a [Discussions](https://github.com/I-is-as-I-does/Jack/discussions) tab.
 
 ## License
 
