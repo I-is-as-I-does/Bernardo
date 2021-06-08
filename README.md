@@ -11,7 +11,7 @@ Contains:
 A JS implementation may be coming up.  
 More translations of reserved words could be welcomed.
 
-## Getting started
+## How to
 
 Just use `src/bernardo-diacritics.json` or `src/bernardo-dictionnary.json` if you wish to!
 
