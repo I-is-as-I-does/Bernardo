@@ -41,8 +41,8 @@ $methods = [
     'cleanEntry' => ['matches' => ['Koons']],
     'isValid' => ['strict' => rBool()]];
 
-require __DIR__ . '/Bernardo_i.php';
-require __DIR__ . '/Bernardo.php';
+require dirname(__DIR__ ). '/src/Bernardo_i.php';
+require dirname(__DIR__) . '/src/Bernardo.php';
 
 $Bernardo = new SSITU\Bernado\Bernardo();
 $adtDictionnary = ['qwibqwib', 'jeffkoons'];

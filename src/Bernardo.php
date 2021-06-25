@@ -9,8 +9,8 @@ class Bernardo implements Bernardo_i {
 
     public function __construct($adtDictionnary = [])
     {
-        $dictionnary = json_decode(file_get_contents(dirname(__DIR__) . '/bernardo-dictionnary.json'), true);
-        $this->diacritics = json_decode(file_get_contents(dirname(__DIR__) . '/bernardo-diacritics.json'), true);
+        $dictionnary = json_decode(file_get_contents(dirname(__DIR__) . '/resources/bernardo-dictionnary.json'), true);
+        $this->diacritics = json_decode(file_get_contents(dirname(__DIR__) . '/resources/bernardo-diacritics.json'), true);
 
         if (!empty($adtDictionnary)) {
             foreach ($adtDictionnary as $adt) {
