@@ -63,7 +63,7 @@ I suggest to make easily accessible to your users a small, dedicated contact for
 ## Credits
 
 Rodrigo De Almeida Siqueira (ex-project: postbit.com)  
-[subdomain-blacklist](https://github.com/michaldudek/subdomain-blacklist)  
+[Subdomain Blacklist](https://github.com/michaldudek/subdomain-blacklist)  
 [Profanity](https://github.com/ConsoleTVs/Profanity)  
 
 ## Contributing
