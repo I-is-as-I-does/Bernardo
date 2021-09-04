@@ -33,15 +33,15 @@ $Bernardo = new Bernardo($adtDictionnary); // will be added to the default one
 
 # All-in-one methods:
 
-$Bernardo->isValidSubDomain($entry, $returnSuggestion = false, $strict = true, $minLen = 4);
-$Bernardo->isValidUsername($entry, $returnSuggestion = false, $strict = true, $minLen = 4);
+$Bernardo->isValidSubDomain($entry, $returnSuggestion = false, $strict = true, $minLen = 4, $maxLen = 20);
+$Bernardo->isValidUsername($entry, $returnSuggestion = false, $strict = true, $minLen = 4, $maxLen = 20);
 
 # Cherry-pick methods:
 
 // These 4 methods will handle diacritics substitution:
-$Bernardo->formatSubdomain($entry, $minLen = 4);
-$Bernardo->formatUsername($entry, $minLen = 4);
-$Bernardo->format($entry, $pattern, $toLower = false, $minLen = 4);
+$Bernardo->formatSubdomain($entry, $minLen = 4, $maxLen = 20);
+$Bernardo->formatUsername($entry, $minLen = 4, $maxLen = 20);
+$Bernardo->format($entry, $pattern, $toLower = false, $minLen = 4, $maxLen = 20);
 $Bernardo->replaceDiacr($entry);
 
 // For these 3, diacritics MUST have been handled beforehand (or expect possibly wrong returns):
@@ -51,7 +51,7 @@ $Bernardo->extractForbidden($noDiacrEntry);
 
 // Adjustements:
 $Bernardo->cleanEntry($entry, $matches);
-$Bernardo->forceLength($entry, $minLen = 4);
+$Bernardo->forceLength($entry, $minLen = 4, $maxLen = 20);
 ```
 
 You can also take a look at `src/php/Bernardo_test.php`.

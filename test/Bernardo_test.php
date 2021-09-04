@@ -10,6 +10,12 @@ function rMinLen()
     return random_int(4, 8);
 }
 
+function rMaxLen()
+{
+    return random_int(15, 32);
+}
+
+
 function formatEcho($it)
 {
     if (is_array($it)) {
@@ -27,15 +33,15 @@ function formatEcho($it)
     return $it;
 }
 
-$entries = ['master', 'admino', 'www', 'shittyshit', '_g', 'a-a', 'zorro-friend', 'ZorroZorro', 'Koons', 'vas Qwib-Qwib', 'c\'est la fête!'];
+$entries = ['master', 'admino', 'www', 'shittyshit', '_g', 'a-a', 'zorro-friend', 'ZorroZorro', 'Koons', 'vas Qwib-Qwib', 'c\'est la fête!', 'some-pretty-long-string-of-characters'];
 $methods = [
-    'isValidSubDomain' => ['returnSuggestion' => rBool(), 'strict' => rBool(), 'minLen' => rMinLen()],
-    'isValidUsername' => ['returnSuggestion' => rBool(), 'strict' => rBool(), 'minLen' => rMinLen()],
-    'formatSubdomain' => ['minLen' => rMinLen()],
-    'formatUsername' => ['minLen' => rMinLen()],
+    'isValidSubDomain' => ['returnSuggestion' => rBool(), 'strict' => rBool(), 'minLen' => rMinLen(), 'maxLen' => rMaxLen()],
+    'isValidUsername' => ['returnSuggestion' => rBool(), 'strict' => rBool(), 'minLen' => rMinLen(), 'maxLen' => rMaxLen()],
+    'formatSubdomain' => ['minLen' => rMinLen(), 'maxLen' => rMaxLen()],
+    'formatUsername' => ['minLen' => rMinLen(), 'maxLen' => rMaxLen()],
     'replaceDiacr' => [],
-    'forceLength' => ['minLen' => rMinLen()],
-    'format' => ['\s+', 'toLower' => rBool(), 'minLen' => rMinLen()],
+    'forceLength' => ['minLen' => rMinLen(), 'maxLen' => rMaxLen()],
+    'format' => ['\s+', 'toLower' => rBool(), 'minLen' => rMinLen(), 'maxLen' => rMaxLen()],
     'strictExtractForbidden' => ['stopAtFirst' => rBool()],
     'extractForbidden' => [],
     'cleanEntry' => ['matches' => ['Koons']],
