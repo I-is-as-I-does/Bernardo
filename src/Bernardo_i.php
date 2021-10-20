@@ -6,6 +6,8 @@ interface Bernardo_i
 {
     public function __construct($adtDictionnary = array());
 
+    public function setAdtDictionnary(array $items);
+
      # All-in-one methods:
      
     public function isValidSubDomain($entry, $returnSuggestion = false, $strict = true, $minLen = 4, $maxLen = 20);

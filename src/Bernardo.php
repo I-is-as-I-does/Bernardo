@@ -7,20 +7,23 @@ class Bernardo implements Bernardo_i {
     private $dictionnary = [];
     private $diacritics;
 
-    public function __construct($adtDictionnary = [])
+    public function __construct($adtDictionnary = array())
     {
-        $dictionnary = json_decode(file_get_contents(dirname(__DIR__) . '/resources/bernardo-dictionnary.json'), true);
+        $this->dictionnary = json_decode(file_get_contents(dirname(__DIR__) . '/resources/bernardo-dictionnary.json'), true);
         $this->diacritics = json_decode(file_get_contents(dirname(__DIR__) . '/resources/bernardo-diacritics.json'), true);
+        if($adtDictionnary){
+            $this->setAdtDictionnary($adtDictionnary);
+        }
 
-        if (!empty($adtDictionnary)) {
-            foreach ($adtDictionnary as $adt) {
-                if (is_string($adt)) {
-                    $dictionnary[] = $adt;
-                }
+    }
+
+    public function setAdtDictionnary(array $items)
+    {
+        foreach ($items as $itm) {
+            if (is_string($itm) && !in_array($itm, $this->dictionnary)) {
+                $this->dictionnary[] = $itm;
             }
         }
-        $this->dictionnary = $dictionnary;
-
     }
 
     # All-in-one methods:
